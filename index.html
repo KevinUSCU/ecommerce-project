@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <!-- Local Styles -->
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/checkout.css">
+  <link rel="stylesheet" href="/css/index.css">
   <!-- Local JS -->
   <script defer src="js/index.js"></script>
 </head>
@@ -55,7 +55,7 @@
   </nav>
 
   <!-- ==================== MAIN CONTENT ==================== -->
-  <div class="container-fluid content-wrapper main">
+  <div class="content-wrapper main">
 
     <section class="carousel-section">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -79,27 +79,17 @@
       </div>
     </section>
 
+    <!-- ==================== HIGHLIGHTED PRODUCT SECTION ==================== -->
+
     <section class="product-highlight">
+      <div class="new-arrival mb-5 mt-0">
+        <h2 class="text-center"><strong>NEW</strong> ARRIVALS</h2>
+      </div>
       <div class="container">
         <div class="row">
-          <div class="col-12 new-arrival mb-5">
-            <h3 class="text-center"><strong>NEW</strong> ARRIVALS</h3>
-          </div>
-        </div>
-        <div class="row mb-4">
-          <div class="col-md-4 col-sm-12">
+          <div class="col-md-4 col-sm-12 mb-5 mx-3 px-0 listing">
             <img src="/images/products/jersey.jpeg" alt="racing jersey" class="product">
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <img src="/images/products/insulated-vest.jpeg" alt="insulated jersey" class="product">
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <img src="/images/products/jersey.jpeg" alt="" class="product">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-12 mb-5 listing">
-            <h5 class="product-name mt-3">LONG SLEEVE TRICOLOUR JERSEY</h5>
+            <h5 class="product-name mt-3 px-0">LONG SLEEVE TRICOLOUR JERSEY</h5>
             <p><strong>$</strong>170.00</p>
             <div class="rating d-flex justify-content-between">
               <div class="stars">
@@ -115,6 +105,7 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-12 mb-5 mx-1 listing">
+            <img src="/images/products/insulated-vest.jpeg" alt="insulated jersey" class="product">
             <h5 class="product-name mt-3">BREVET INSULATED VEST</h5>
             <p><strong>$</strong>210.00</p>
             <div class="rating d-flex justify-content-between">
@@ -131,6 +122,7 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-12 mb-5 listing">
+            <img src="/images/products/bibs.jpeg" alt="" class="product">
             <h5 class="product-name mt-3">RCC PRO TEAM BIB SHORTS II</h5>
             <p><strong>$</strong>295.00</p>
             <div class="rating d-flex justify-content-between">
@@ -150,10 +142,17 @@
       </div>
     </section>
 
-    <section class="sign-up">
+    <!-- ==================== NEWSLETTER SIGNUP ==================== -->
+
+
+    <section class="sign-up py-5">
       <div class="container">
-        <div class="row">
-        </div>
+        <h2 class="text-center mb-4"><strong>SIGNUP</strong>TODAY!</h2>
+        <h3 class="text-center mb-4">Stay up to date with all things <strong>RAPHA</strong></h3>
+        <form class="sign-up-form d-flex justify-content-around" action="index.html" method="post">
+          <input type="email" name="email" id="email" class="pl-2" value="" placeholder="lanceA@livestrong.com">
+          <button type="button" class="btn btn-lg btn-dark px-4">Submit</button>
+        </form>
       </div>
     </section>
 

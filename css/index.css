@@ -18,6 +18,7 @@ body {
   background-image: url('/images/sativa.png');
   padding: 3rem;
   margin: 2rem 0 2rem 0;
+  width: 100%;
 }
 
 .product {
@@ -30,4 +31,27 @@ body {
 
 .rating-link a {
   font-size: .8rem;
+}
+
+
+/*NEWSLETTER SIGNUP*/
+
+.sign-up {
+  background-image: url('/images/sativa.png');
+}
+
+.sign-up-form input {
+  width: 70%;
+}
+
+::-webkit-input-placeholder {
+  color: gainsboro;
+}
+
+::-moz-placeholder {
+  color: gainsboro;
+}
+
+::-ms-input-placeholder {
+  color: gainsboro;
 }
