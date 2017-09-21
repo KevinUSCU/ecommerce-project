@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dbdbdb;
+}
+
+#navbarSupportedContent {
+  display: flex;
+  justify-content: center;
+}
+
+.checkout {
+  margin-left: auto;
+}
