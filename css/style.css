@@ -11,6 +11,14 @@ body {
   color: #EFEFEF;
 }
 
+.pink {
+  color: rgba(246,117,153,.99);
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
 h3, p, li, a {
   font-family: 'Roboto', Helvetica, sans-serif;
 }
@@ -20,9 +28,18 @@ h3 {
   text-transform: uppercase;
 }
 
+p {
+  margin-bottom: 0px;
+}
+
 /*== GENERAL STYLE ==*/
-img {
+.wide {
   width: 100%;
+}
+
+/*== GENERAL PADDING & MARGIN ==*/
+.mrg-top-2em {
+  margin-top: 2em;
 }
 
 /*=== NAVBAR ===*/
@@ -37,6 +54,28 @@ img {
 
 
 /*=== FOOTER ===*/
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tiny-product {
+  display: flex;
+}
+
+.tiny-product-img {
+  margin-right: 1em;
+}
+
+.tiny-product-text {
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.tiny-product-text span:last-child {
+  margin-left: 1em;
+}
+
 footer h3 {
   border-bottom: 1px solid #EFEFEF;
   text-align: center;
