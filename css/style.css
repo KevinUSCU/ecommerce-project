@@ -63,6 +63,10 @@ p {
   flex-direction: column;
 }
 
+footer .col {
+  margin: 0em 1em;
+}
+
 /*-- On Sale --*/
 .tiny-product {
   display: flex;
@@ -114,4 +118,21 @@ body {
 footer {
   background-color: #343a40;
   min-height: 600px;
+  position: relative;
+}
+
+.copyright {
+  min-height: 80px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+}
+
+.copyright .row {
+  align-items: center;
+}
+
+.copyright p {
+  padding-left: 30px;
 }
