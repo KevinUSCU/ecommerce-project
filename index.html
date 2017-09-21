@@ -16,13 +16,13 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <!-- Local Styles -->
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/checkout.css">
+  <link rel="stylesheet" href="/css/index.css">
   <!-- Local JS -->
   <script defer src="js/index.js"></script>
 </head>
 
 <body>
-<!-- ==================== NAV ==================== -->
+  <!-- ==================== NAV ==================== -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Rapha</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,34 +54,112 @@
 
   </nav>
 
-<!-- ==================== MAIN CONTENT ==================== -->
-  <div class="container-fluid content-wrapper">
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <div class="content-wrapper main">
 
-      <section class="carousel">
-        <div class="container">
-          <div class="row">
-
+    <section class="carousel-section">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="/images/carousel/rapha3.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/carousel/rapha2.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/carousel/rapha1.png" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/carousel/rapha4.png" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="/images/carousel/rapha5.png" alt="Third slide">
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="product-highlight">
-        <div class="container">
-          <div class="row">
+    <!-- ==================== HIGHLIGHTED PRODUCT SECTION ==================== -->
+
+    <section class="product-highlight">
+      <div class="new-arrival mb-5 mt-0">
+        <h2 class="text-center"><strong>NEW</strong> ARRIVALS</h2>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 mb-5 mx-3 px-0 listing">
+            <img src="/images/products/jersey.jpeg" alt="racing jersey" class="product">
+            <h5 class="product-name mt-3 px-0">LONG SLEEVE TRICOLOUR JERSEY</h5>
+            <p><strong>$</strong>170.00</p>
+            <div class="rating d-flex justify-content-between">
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <div class="rating-link">
+                <a href="#">(12 reviews)</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 mb-5 mx-1 listing">
+            <img src="/images/products/insulated-vest.jpeg" alt="insulated jersey" class="product">
+            <h5 class="product-name mt-3">BREVET INSULATED VEST</h5>
+            <p><strong>$</strong>210.00</p>
+            <div class="rating d-flex justify-content-between">
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+              <div class="rating-link">
+                <a href="#">(339 reviews)</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 mb-5 listing">
+            <img src="/images/products/bibs.jpeg" alt="" class="product">
+            <h5 class="product-name mt-3">RCC PRO TEAM BIB SHORTS II</h5>
+            <p><strong>$</strong>295.00</p>
+            <div class="rating d-flex justify-content-between">
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+              </div>
+              <div class="rating-link">
+                <a href="#">(104 reviews)</a>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="sign-up">
-        <div class="container">
-          <div class="row">
-          </div>
-        </div>
-      </section>
+    <!-- ==================== NEWSLETTER SIGNUP ==================== -->
 
-  </div><!-- close content-wrapper -->
 
-<!-- ==================== FOOTER ==================== -->
+    <section class="sign-up py-5">
+      <div class="container">
+        <h2 class="text-center mb-4"><strong>SIGNUP</strong>TODAY!</h2>
+        <h3 class="text-center mb-4">Stay up to date with all things <strong>RAPHA</strong></h3>
+        <form class="sign-up-form d-flex justify-content-around" action="index.html" method="post">
+          <input type="email" name="email" id="email" class="pl-2" value="" placeholder="lanceA@livestrong.com">
+          <button type="button" class="btn btn-lg btn-dark px-4">Submit</button>
+        </form>
+      </div>
+    </section>
+
+  </div>
+  <!-- close content-wrapper -->
+
+  <!-- ==================== FOOTER ==================== -->
   <footer>
     <div class="container-fluid">
       <div class="row pad-1em">
@@ -90,7 +168,8 @@
         <div class="col visit-us">
           <h3 class="white">Visit <b>Us</b></h3>
           <img class="wide" src="/images/rapha-map.png">
-        </div><!-- close col -->
+        </div>
+        <!-- close col -->
 
         <!-- ===== ON SALE ===== -->
         <div class="col on-sale">
@@ -105,7 +184,8 @@
                 <p>Product 1</p>
                 <p><span class="strike">$300</span> <span class="pink">$180</span></p>
               </div>
-            </div><!-- close tiny-product -->
+            </div>
+            <!-- close tiny-product -->
 
             <div class="tiny-product mrg-top-2em">
               <div class="tiny-product-img">
@@ -115,7 +195,8 @@
                 <p>Product 1</p>
                 <p><span class="strike">$300</span> <span class="pink">$180</span></p>
               </div>
-            </div><!-- close tiny-product -->
+            </div>
+            <!-- close tiny-product -->
 
             <div class="tiny-product mrg-top-2em">
               <div class="tiny-product-img">
@@ -125,7 +206,8 @@
                 <p>Product 1</p>
                 <p><span class="strike">$300</span> <span class="pink">$180</span></p>
               </div>
-            </div><!-- close tiny-product -->
+            </div>
+            <!-- close tiny-product -->
 
             <div class="tiny-product mrg-top-2em">
               <div class="tiny-product-img">
@@ -135,10 +217,13 @@
                 <p>Product 1</p>
                 <p><span class="strike">$300</span> <span class="pink">$180</span></p>
               </div>
-            </div><!-- close tiny-product -->
+            </div>
+            <!-- close tiny-product -->
 
-          </div><!-- close container -->
-        </div><!-- close col -->
+          </div>
+          <!-- close container -->
+        </div>
+        <!-- close col -->
 
         <!-- ===== MORE INFO ===== -->
         <div class="col more-info">
@@ -149,7 +234,8 @@
             <p>— Secure Shipping</p>
             <p>— Contact Us</p>
           </div>
-        </div><!-- close col -->
+        </div>
+        <!-- close col -->
 
         <!-- ===== IN THE NEWS ===== -->
         <div class="col in-the-news">
@@ -172,10 +258,13 @@
               <p>June 16th, 2017</p>
             </div>
           </div>
-        </div><!-- close col -->
+        </div>
+        <!-- close col -->
 
-      </div><!-- close footer's first row -->
-    </div><!-- close footer's first container -->
+      </div>
+      <!-- close footer's first row -->
+    </div>
+    <!-- close footer's first container -->
 
     <div class="container-fluid white copyright tiny-text">
       <div class="row">

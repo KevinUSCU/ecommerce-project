@@ -1,0 +1,57 @@
+body {
+  background-color: #fff;
+}
+
+.carousel-section {
+  max-height: 500px;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*NEW ARRIVALS*/
+
+.new-arrival {
+  background-image: url('/images/sativa.png');
+  padding: 3rem;
+  margin: 2rem 0 2rem 0;
+  width: 100%;
+}
+
+.product {
+  max-width: 100%;
+}
+
+.listing {
+  border-top: 2px solid #000;
+}
+
+.rating-link a {
+  font-size: .8rem;
+}
+
+
+/*NEWSLETTER SIGNUP*/
+
+.sign-up {
+  background-image: url('/images/sativa.png');
+}
+
+.sign-up-form input {
+  width: 70%;
+}
+
+::-webkit-input-placeholder {
+  color: gainsboro;
+}
+
+::-moz-placeholder {
+  color: gainsboro;
+}
+
+::-ms-input-placeholder {
+  color: gainsboro;
+}
