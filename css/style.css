@@ -48,6 +48,20 @@ p {
   justify-content: center;
 }
 
+nav {
+  min-height: 60px;
+  text-transform: uppercase;
+}
+
+/*overwrite stubborn Bootstrap*/
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(246,117,153,.99);
+}
+
+.nav-item a {
+  margin: 0em 1em;
+}
+
 .checkout {
   margin-left: auto;
 }
