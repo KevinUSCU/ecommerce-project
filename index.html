@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>eCommerce Checkout</title>
+  <title>eCommerce Home</title>
   <!-- Bootstrap 4 CDN -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <!-- Bootstrap JS -->
@@ -12,12 +12,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
   <!-- Font Awesome JS -->
   <script src="https://use.fontawesome.com/9ee73d7f3e.js"></script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <!-- Local Styles -->
-  <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/checkout.css">
   <!-- Local JS -->
-  <script defer src="js/checkout.js"></script>
+  <script defer src="js/index.js"></script>
 </head>
 
 <body>
@@ -161,20 +162,114 @@
 
   <!-- ==================== FOOTER ==================== -->
   <footer>
-    <div class="container">
+    <div class="container-fluid">
+      <div class="row pad-1em">
+
+        <!-- ===== VISIT US ===== -->
+        <div class="col visit-us">
+          <h3 class="white">Visit <b>Us</b></h3>
+          <img class="wide" src="/images/rapha-map.png">
+        </div>
+        <!-- close col -->
+
+        <!-- ===== ON SALE ===== -->
+        <div class="col on-sale">
+          <h3 class="white">On <b>Sale</b></h3>
+          <div class="footer-container white tiny-text">
+
+            <div class="tiny-product">
+              <div class="tiny-product-img">
+                <img src="http://facetheforce.today/random/50?r=1">
+              </div>
+              <div>
+                <p>Product 1</p>
+                <p><span class="strike">$300</span> <span class="pink">$180</span></p>
+              </div>
+            </div>
+            <!-- close tiny-product -->
+
+            <div class="tiny-product mrg-top-2em">
+              <div class="tiny-product-img">
+                <img src="http://facetheforce.today/random/50?r=1">
+              </div>
+              <div>
+                <p>Product 1</p>
+                <p><span class="strike">$300</span> <span class="pink">$180</span></p>
+              </div>
+            </div>
+            <!-- close tiny-product -->
+
+            <div class="tiny-product mrg-top-2em">
+              <div class="tiny-product-img">
+                <img src="http://facetheforce.today/random/50?r=1">
+              </div>
+              <div>
+                <p>Product 1</p>
+                <p><span class="strike">$300</span> <span class="pink">$180</span></p>
+              </div>
+            </div>
+            <!-- close tiny-product -->
+
+            <div class="tiny-product mrg-top-2em">
+              <div class="tiny-product-img">
+                <img src="http://facetheforce.today/random/50?r=1">
+              </div>
+              <div>
+                <p>Product 1</p>
+                <p><span class="strike">$300</span> <span class="pink">$180</span></p>
+              </div>
+            </div>
+            <!-- close tiny-product -->
+
+          </div>
+          <!-- close container -->
+        </div>
+        <!-- close col -->
+
+        <!-- ===== MORE INFO ===== -->
+        <div class="col more-info">
+          <h3 class="white">More <b>Info</b></h3>
+          <div class="footer-container white tiny-text">
+            <p>— Shipping &amp; Returns</p>
+            <p>— International Shipping</p>
+            <p>— Secure Shipping</p>
+            <p>— Contact Us</p>
+          </div>
+        </div>
+        <!-- close col -->
+
+        <!-- ===== IN THE NEWS ===== -->
+        <div class="col in-the-news">
+          <h3 class="white">In the <b>News</b></h3>
+          <div class="footer-container white tiny-text">
+            <div>
+              <p class="pink">Fall Line Released</p>
+              <p>September 10th, 2017</p>
+            </div>
+            <div class="mrg-top-2em">
+              <p class="pink">Our Factories</p>
+              <p>August 22nd, 2017</p>
+            </div>
+            <div class="mrg-top-2em">
+              <p class="pink">A Letter From Our CEO</p>
+              <p>July 8th, 2017</p>
+            </div>
+            <div class="mrg-top-2em">
+              <p class="pink">What Goes Into Production?</p>
+              <p>June 16th, 2017</p>
+            </div>
+          </div>
+        </div>
+        <!-- close col -->
+
+      </div>
+      <!-- close footer's first row -->
+    </div>
+    <!-- close footer's first container -->
+
+    <div class="container-fluid white copyright tiny-text">
       <div class="row">
-        <div class="col">
-          <p class="white">content</p>
-        </div>
-        <div class="col">
-          <p class="white">content</p>
-        </div>
-        <div class="col">
-          <p class="white">content</p>
-        </div>
-        <div class="col">
-          <p class="white">content</p>
-        </div>
+        <p><b>Copyright © 2017</b> ECOMMERCE <b>ALL RIGHTS RESERVED</b>, but not really</p>
       </div>
     </div>
   </footer>
