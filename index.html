@@ -86,30 +86,36 @@
         <h2 class="text-center"><strong>NEW</strong> ARRIVALS</h2>
       </div>
       <div class="container">
-        <div class="row">
+        <div class="row d-flex justify-content-center align-items-center">
           <div class="col-lg-4 col-md-8 mb-5 d-flex flex-column justify-content-center listing">
-            <img src="/images/products/jersey.jpeg" alt="racing jersey" class="product">
-            <h5 class="product-name mt-3 px-0">LONG SLEEVE TRICOLOUR JERSEY</h5>
+            <img src="/images/products/jersey.jpeg" alt="racing jersey" class="product mb-3">
+            <div class="overlay">
+              <a href="#"><i class="fa fa-cart-plus mr-1"></i> ADD TO CART</a>
+            </div>
+            <h5 class="product-name mt-3 px-0">LONG TRICOLOUR JERSEY</h5>
             <p><strong>$</strong>170.00</p>
-            <div class="rating d-flex justify-content-between">
-              <div class="stars">
+            <div id="rating-1" class="rating d-flex justify-content-lg-start justify-content-md-center">
+              <div class="stars mr-2">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <div class="rating-link">
+              <div class="rating-link mr-5">
                 <a href="#">(12 reviews)</a>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-8 mb-5 d-flex flex-column justify-content-center listing">
-            <img src="/images/products/insulated-vest.jpeg" alt="insulated jersey" class="product">
+            <img src="/images/products/insulated-vest.jpeg" alt="insulated jersey" class="product mb-3">
+            <div class="overlay">
+              <a href="#"><i class="fa fa-cart-plus mr-1"></i> ADD TO CART</a>
+            </div>
             <h5 class="product-name mt-3">BREVET INSULATED VEST</h5>
             <p><strong>$</strong>210.00</p>
-            <div class="rating d-flex justify-content-between">
-              <div class="stars">
+            <div id="rating-2" class="rating d-flex justify-content-lg-start justify-content-md-center">
+              <div class="stars mr-2">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -121,19 +127,22 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-pull-8 mb-5 d-flex flex-column justify-content-center listing">
-            <img src="/images/products/bibs.jpeg" alt="" class="product">
+          <div class="col-lg-4 col-md-8 mb-5 d-flex flex-column justify-content-center listing">
+            <img src="/images/products/bibs.jpeg" alt="racing bibs" class="product mb-3">
+            <div class="overlay">
+              <a href="#"><i class="fa fa-cart-plus mr-1"></i> ADD TO CART</a>
+            </div>
             <h5 class="product-name mt-3">RCC PRO TEAM BIB SHORTS II</h5>
             <p><strong>$</strong>295.00</p>
-            <div class="rating d-flex justify-content-between">
-              <div class="stars">
+            <div id="rating-3" class="rating d-flex justify-content-lg-start justify-content-md-center">
+              <div class="stars mr-2">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
               </div>
-              <div class="rating-link">
+              <div class="rating-link mr-2">
                 <a href="#">(104 reviews)</a>
               </div>
             </div>
@@ -146,132 +155,139 @@
 
 
     <section class="sign-up py-5">
-      <div class="container">
-        <h2 class="text-center mb-4"><strong>SIGNUP</strong>TODAY!</h2>
-        <h3 class="text-center mb-4">Stay up to date with all things <strong>RAPHA</strong></h3>
-        <form class="sign-up-form d-flex justify-content-around" action="index.html" method="post">
-          <input type="email" name="email" id="email" class="pl-2" value="" placeholder="lanceA@livestrong.com">
-          <button type="button" class="btn btn-lg btn-dark px-4">Submit</button>
+      <div class="container mb-5">
+        <div class="row">
+          <h2 class="text-center col-lg-12 mb-4"><strong>SIGNUP</strong> TODAY!</h2>
+          <h3 class="text-center col-lg-12 mb-4">Stay up to date with all things <strong>RAPHA</strong></h3>
+        </div>
+        <form id="email-form" class="" action="index.html" method="post">
+          <div class="row">
+            <div class="form-group col-lg-12 sign-up-form d-flex flex-lg-row flex-md-column justify-content-lg-start justify-content-md-center">
+              <input type="text" id="name" name="name" class="mr-4" value="" placeholder="name" required>
+              <input type="email" name="email" id="email" class="mr-4" value="" placeholder="email" required>
+              <button type="submit" id="submit" value="Sign Up" class="btn px-4">Sign Up</button>
+            </div>
+          </div>
         </form>
+        <p class="col-xs-12 mb-0 mt-2 text-center"><strong id="success"></strong></p>
+
       </div>
     </section>
+    <!-- close content-wrapper -->
 
-  </div>
-  <!-- close content-wrapper -->
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <div class="container-fluid">
+        <div class="row pad-1em">
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer>
-    <div class="container-fluid">
-      <div class="row pad-1em">
-
-        <!-- ===== VISIT US ===== -->
-        <div class="col visit-us">
-          <h3 class="white">Visit <b>Us</b></h3>
-          <img class="wide" src="/images/rapha-map.png">
-        </div>
-        <!-- close col -->
-
-        <!-- ===== ON SALE ===== -->
-        <div class="col on-sale">
-          <h3 class="white">On <b>Sale</b></h3>
-          <div class="footer-container white tiny-text">
-
-            <div class="tiny-product">
-              <div class="tiny-product-img">
-                <img src="http://facetheforce.today/random/50?r=1">
-              </div>
-              <div>
-                <p>Product 1</p>
-                <p><span class="strike">$300</span> <span class="pink">$180</span></p>
-              </div>
-            </div>
-            <!-- close tiny-product -->
-
-            <div class="tiny-product mrg-top-2em">
-              <div class="tiny-product-img">
-                <img src="http://facetheforce.today/random/50?r=1">
-              </div>
-              <div>
-                <p>Product 1</p>
-                <p><span class="strike">$300</span> <span class="pink">$180</span></p>
-              </div>
-            </div>
-            <!-- close tiny-product -->
-
-            <div class="tiny-product mrg-top-2em">
-              <div class="tiny-product-img">
-                <img src="http://facetheforce.today/random/50?r=1">
-              </div>
-              <div>
-                <p>Product 1</p>
-                <p><span class="strike">$300</span> <span class="pink">$180</span></p>
-              </div>
-            </div>
-            <!-- close tiny-product -->
-
-            <div class="tiny-product mrg-top-2em">
-              <div class="tiny-product-img">
-                <img src="http://facetheforce.today/random/50?r=1">
-              </div>
-              <div>
-                <p>Product 1</p>
-                <p><span class="strike">$300</span> <span class="pink">$180</span></p>
-              </div>
-            </div>
-            <!-- close tiny-product -->
-
+          <!-- ===== VISIT US ===== -->
+          <div class="col visit-us">
+            <h3 class="white">Visit <b>Us</b></h3>
+            <img class="wide" src="/images/rapha-map.png">
           </div>
-          <!-- close container -->
-        </div>
-        <!-- close col -->
+          <!-- close col -->
 
-        <!-- ===== MORE INFO ===== -->
-        <div class="col more-info">
-          <h3 class="white">More <b>Info</b></h3>
-          <div class="footer-container white tiny-text">
-            <p>— Shipping &amp; Returns</p>
-            <p>— International Shipping</p>
-            <p>— Secure Shipping</p>
-            <p>— Contact Us</p>
+          <!-- ===== ON SALE ===== -->
+          <div class="col on-sale">
+            <h3 class="white">On <b>Sale</b></h3>
+            <div class="footer-container white tiny-text">
+
+              <div class="tiny-product">
+                <div class="tiny-product-img">
+                  <img src="http://facetheforce.today/random/50?r=1">
+                </div>
+                <div>
+                  <p>Product 1</p>
+                  <p><span class="strike">$300</span> <span class="pink">$180</span></p>
+                </div>
+              </div>
+              <!-- close tiny-product -->
+
+              <div class="tiny-product mrg-top-2em">
+                <div class="tiny-product-img">
+                  <img src="http://facetheforce.today/random/50?r=1">
+                </div>
+                <div>
+                  <p>Product 1</p>
+                  <p><span class="strike">$300</span> <span class="pink">$180</span></p>
+                </div>
+              </div>
+              <!-- close tiny-product -->
+
+              <div class="tiny-product mrg-top-2em">
+                <div class="tiny-product-img">
+                  <img src="http://facetheforce.today/random/50?r=1">
+                </div>
+                <div>
+                  <p>Product 1</p>
+                  <p><span class="strike">$300</span> <span class="pink">$180</span></p>
+                </div>
+              </div>
+              <!-- close tiny-product -->
+
+              <div class="tiny-product mrg-top-2em">
+                <div class="tiny-product-img">
+                  <img src="http://facetheforce.today/random/50?r=1">
+                </div>
+                <div>
+                  <p>Product 1</p>
+                  <p><span class="strike">$300</span> <span class="pink">$180</span></p>
+                </div>
+              </div>
+              <!-- close tiny-product -->
+
+            </div>
+            <!-- close container -->
           </div>
-        </div>
-        <!-- close col -->
+          <!-- close col -->
 
-        <!-- ===== IN THE NEWS ===== -->
-        <div class="col in-the-news">
-          <h3 class="white">In the <b>News</b></h3>
-          <div class="footer-container white tiny-text">
-            <div>
-              <p class="pink">Fall Line Released</p>
-              <p>September 10th, 2017</p>
-            </div>
-            <div class="mrg-top-2em">
-              <p class="pink">Our Factories</p>
-              <p>August 22nd, 2017</p>
-            </div>
-            <div class="mrg-top-2em">
-              <p class="pink">A Letter From Our CEO</p>
-              <p>July 8th, 2017</p>
-            </div>
-            <div class="mrg-top-2em">
-              <p class="pink">What Goes Into Production?</p>
-              <p>June 16th, 2017</p>
+          <!-- ===== MORE INFO ===== -->
+          <div class="col more-info">
+            <h3 class="white">More <b>Info</b></h3>
+            <div class="footer-container white tiny-text">
+              <p>— Shipping &amp; Returns</p>
+              <p>— International Shipping</p>
+              <p>— Secure Shipping</p>
+              <p>— Contact Us</p>
             </div>
           </div>
-        </div>
-        <!-- close col -->
+          <!-- close col -->
 
+          <!-- ===== IN THE NEWS ===== -->
+          <div class="col in-the-news">
+            <h3 class="white">In the <b>News</b></h3>
+            <div class="footer-container white tiny-text">
+              <div>
+                <p class="pink">Fall Line Released</p>
+                <p>September 10th, 2017</p>
+              </div>
+              <div class="mrg-top-2em">
+                <p class="pink">Our Factories</p>
+                <p>August 22nd, 2017</p>
+              </div>
+              <div class="mrg-top-2em">
+                <p class="pink">A Letter From Our CEO</p>
+                <p>July 8th, 2017</p>
+              </div>
+              <div class="mrg-top-2em">
+                <p class="pink">What Goes Into Production?</p>
+                <p>June 16th, 2017</p>
+              </div>
+            </div>
+          </div>
+          <!-- close col -->
+
+        </div>
+        <!-- close footer's first row -->
       </div>
-      <!-- close footer's first row -->
-    </div>
-    <!-- close footer's first container -->
+      <!-- close footer's first container -->
 
-    <div class="container-fluid white copyright tiny-text">
-      <div class="row">
-        <p><b>Copyright © 2017</b> ECOMMERCE <b>ALL RIGHTS RESERVED</b>, but not really</p>
+      <div class="container-fluid white copyright tiny-text">
+        <div class="row">
+          <p><b>Copyright © 2017</b> ECOMMERCE <b>ALL RIGHTS RESERVED</b>, but not really</p>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
 </body>
 

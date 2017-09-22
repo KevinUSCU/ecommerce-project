@@ -1,54 +1,128 @@
-body {
-  background-color: #fff;
-}
+                                                                  body {
+                                                                  background-color: #fff;
+                                                                }
 
-.carousel-section {
-  max-height: 500px;
-  width: 100%;
-  overflow: hidden;
-  background-color: #000;
-  margin: 0;
-  padding: 0;
-}
+                                                                .carousel-section {
+                                                                  max-height: 500px;
+                                                                  width: 100%;
+                                                                  overflow: hidden;
+                                                                  background-color: #000;
+                                                                  margin: 0;
+                                                                  padding: 0;
+                                                                }
+                                                                /*NEW ARRIVALS*/
 
+                                                                .new-arrival {
+                                                                  background-image: url('/images/light_grey.png');
+                                                                  padding: 3rem;
+                                                                  margin: 2rem 0 2rem 0;
+                                                                  width: 100%;
+                                                                }
 
-/*NEW ARRIVALS*/
+                                                                .listing {
+                                                                  width: 100%;
+                                                                }
 
-.new-arrival {
-  background-image: url('/images/sativa.png');
-  padding: 3rem;
-  margin: 2rem 0 2rem 0;
-  width: 100%;
-}
+                                                                .product {
+                                                                  max-height: 300px;
+                                                                  margin: auto;
+                                                                }
 
-.product {
-  max-height: 300px;
-  margin: auto;
-}
+                                                                .overlay {
+                                                                  position: absolute;
+                                                                  bottom: 110px;
+                                                                  left: 0;
+                                                                  right: 0;
+                                                                  background-color: #000;
+                                                                  overflow: hidden;
+                                                                  width: 100%;
+                                                                  height: 0;
+                                                                  transition: .5s ease;
+                                                                  display: none;
+                                                                  text-align: center;
+                                                                  pointer-events: none;
+                                                                }
 
-.rating-link a {
-  font-size: .8rem;
-}
+                                                                .overlay a {
+                                                                  text-decoration: none;
+                                                                  color: #fff;
+                                                                  font-size: .8rem;
+                                                                }
 
+                                                                .product:hover+.overlay {
+                                                                  display: flex;
+                                                                  justify-content: center;
+                                                                  align-items: center;
+                                                                  height: 10%;
+                                                                }
 
-/*NEWSLETTER SIGNUP*/
+                                                                .rating-link a {
+                                                                  font-size: .8rem;
+                                                                }
+                                                                /*NEWSLETTER SIGNUP*/
 
-.sign-up {
-  background-image: url('/images/sativa.png');
-}
+                                                                .sign-up {
+                                                                  background-image: url('/images/light_grey.png');
+                                                                }
 
-.sign-up-form input {
-  width: 70%;
-}
+                                                                #submit {
+                                                                  /*width: 20%;*/
+                                                                  background-color: #000;
+                                                                  border: 1px gainsboro solid;
+                                                                  border-radius: 6px;
+                                                                  color: #fff;
+                                                                  font-size: .8rem;
+                                                                }
 
-::-webkit-input-placeholder {
-  color: gainsboro;
-}
+                                                                #name {
+                                                                  /*width: 30%;*/
+                                                                  align-self: center;
+                                                                }
 
-::-moz-placeholder {
-  color: gainsboro;
-}
+                                                                .sign-up-form input {
+                                                                  width: 50%;
+                                                                }
 
-::-ms-input-placeholder {
-  color: gainsboro;
-}
+                                                                 ::-webkit-input-placeholder {
+                                                                  color: gainsboro;
+                                                                }
+
+                                                                 ::-moz-placeholder {
+                                                                  color: gainsboro;
+                                                                }
+
+                                                                 ::-ms-input-placeholder {
+                                                                  color: gainsboro;
+                                                                }
+
+                                                                @media (max-width: 990px) {
+                                                                  .listing {
+                                                                    text-align: center;
+                                                                  }
+                                                                  #name {
+                                                                    align-self: center;
+                                                                    margin-bottom: 1rem;
+                                                                  }
+                                                                  #submit {
+                                                                    width: 25%;
+                                                                    margin: auto;
+                                                                  }
+                                                                  #email {
+                                                                    width: 100%;
+                                                                    margin-bottom: 1rem;
+                                                                  }
+                                                                  #success {
+                                                                    margin: auto;
+                                                                  }
+                                                                  @media (min-width: 1px) and (max-width: 590px) {
+                                                                    .listing {
+                                                                      text-align: center;
+                                                                    }
+                                                                    #submit {
+                                                                      width: 25%;
+                                                                      margin: auto;
+                                                                    }
+                                                                    #email {
+                                                                      width: 100%;
+                                                                    }
+                                                                  }
