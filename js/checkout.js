@@ -90,7 +90,7 @@ var cleave = new Cleave('#cvc', {
     numericOnly: true
 });
 
-
+//Form Submission and Validation
 // let buyButton = document.getElementById("buy")
 // buyButton.addEventListener("click", function() {
 //     preventDefault()
