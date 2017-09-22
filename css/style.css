@@ -1,5 +1,5 @@
 body {
-  background-color: #dbdbdb;
+  background-color: #fff;
 }
 
 /*== GENERAL FONTS ==*/
@@ -43,14 +43,16 @@ p {
 }
 
 /*=== NAVBAR ===*/
-#navbarSupportedContent {
-  display: flex;
-  justify-content: center;
+nav ul {
+  margin: 0 auto;
 }
 
 nav {
-  min-height: 60px;
   text-transform: uppercase;
+}
+
+.bg-dark {
+  background-color: #1a1a1a!important;
 }
 
 /*overwrite stubborn Bootstrap*/
@@ -64,10 +66,20 @@ nav {
 
 .checkout {
   margin-left: auto;
+  min-width: 100px;
+}
+
+.fa {
+  font-size: 1.3em;
+}
+
+.checkout .fa {
+  margin-right: 0.3em;
 }
 
 
 /*=== FOOTER ===*/
+/* inner content of each section in the footer */
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -105,6 +117,17 @@ footer .col {
   margin-bottom: 0px;
 }
 
+/*-- general footer --*/
+footer {
+  background-color: #1a1a1a;
+  position: relative;
+}
+
+/*-- keeps footer content from disappearing behind copyright --*/
+.footer-row {
+  padding-bottom: 120px;
+}
+
 footer h3 {
   border-bottom: 1px solid #EFEFEF;
   text-align: center;
@@ -113,24 +136,7 @@ footer h3 {
   margin-bottom: 2em;
 }
 
-/* these three make the footer stick...*/
-html, body {
-  height: 100%;
-}
-body {
-  display: flex;
-  flex-direction: column;
-}
-.content-wrapper {
-  flex: 1 0 auto;
-}
-
-footer {
-  background-color: #343a40;
-  min-height: 600px;
-  position: relative;
-}
-
+/*-- copyright --*/
 .copyright {
   min-height: 80px;
   background-color: #000;
@@ -146,3 +152,23 @@ footer {
 .copyright p {
   padding-left: 30px;
 }
+
+/*size and SMALLER*/
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991px) {
+  .checkout {
+    margin: 1em;
+    min-width: 0px;
+  }
+  .navbar-nav {
+    margin: 0 auto;
+  }
+
+  .navbar-brand {
+    margin-right: 0px;
+  }
+
+  div.on-sale, div.more-info, div.in-the-news {
+    margin-top: 3em;
+  }
+ }
