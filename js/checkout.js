@@ -1,43 +1,5 @@
-let cartFullTest = true
-
-//Store items database; item's ID is index in array 
-let itemDatabase = [
-    {
-        product: "Flyweight Jersey",
-        price: 125
-    },
-    {
-        product: "Flyweight Rib Shorts",
-        price: 235
-    },
-    {
-        product: "Pro Team Lightweight Vest",
-        price: 140
-    }
-]
-
-//Shopping Cart holds Cart Items
-var shoppingCart = []
-
-//Cart Items Class
-class cartItem {
-    constructor(prodId, quantity = 1) {
-        this._prodId = prodId
-        this._quantity = quantity
-    }
-
-    get prodId() {
-        return this._prodId
-    }
-
-    get quantity() {
-        return this._quantity
-    }
-
-    setQuantity(newQuantity) {
-        this._quantity = newQuantity
-    }
-}
+//Set following to true to generate fake cart for testing
+let cartFullTest = false
 
 //Create test shopping cart
 if (cartFullTest) {
@@ -46,7 +8,7 @@ if (cartFullTest) {
     shoppingCart = [item1, item2]
 }
 
-//Display Cart on Webpage
+//Display Cart on Checkout Page
 function displayCart() {
     let cartShown = document.querySelector(".cart")
     if (shoppingCart.length > 0) { //Display full cart
@@ -64,27 +26,71 @@ function displayCart() {
         for (let i = 0; i < shoppingCart.length; i++) {
             let itemTotal = shoppingCart[i].quantity * itemDatabase[shoppingCart[i].prodId].price
             total += itemTotal
-            list += `<tr class="table-light"><td>`
-            list += itemDatabase[shoppingCart[i].prodId].product
-            list += `</td><td>`
-            list += shoppingCart[i].quantity
-            list += `</td><td>`
-            list += `$${itemTotal}`
-            list += `</td></tr>`
+            list += `
+                <tr class="table-light">
+                    <td>
+                        ${itemDatabase[shoppingCart[i].prodId].product}
+                    </td>
+                    <td>
+                        ${shoppingCart[i].quantity}
+                    </td>
+                    <td>
+                        $${itemTotal}.00
+                    </td>
+                </tr>`
         }
-        list += `<tr class="table-light"><td></td><td><b>TOTAL</b></td><td>`
-        list += `$${total}`
-        list += `</td></tr></tbody>
+        list += `<tr class="table-light">
+                    <td>
+                    </td>
+                    <td>
+                        <b>TOTAL</b>
+                    </td>
+                    <td>
+                        $${total}.00
+                    </td>
+                </tr>
+            </tbody>
         </table>`
         cartShown.innerHTML = list 
-    } else { //display empty message
+    } else { //display cart empty message
         cartShown.innerHTML = "<p>Your shopping cart is currently empty. How sad...</p>"
     }
 }
 
 displayCart()
 
-//Process Form
+//Form Input Limiters (via Cleave.js)
+
+var cleave = new Cleave('#zip1', {
+    delimiters: ["-"],
+    blocks: [5, 4],
+    numericOnly: true
+});
+
+var cleave = new Cleave('#zip2', {
+    delimiters: ["-"],
+    blocks: [5, 4],
+    numericOnly: true
+});
+
+var cleave = new Cleave('#cardnumber', {
+    creditCard: true,
+    onCreditCardTypeChanged: function(type) {
+        let cardicon = document.querySelector("#cardicon")
+        if (type === "amex") cardicon.innerHTML = `<i class="fa fa-cc-amex"></i>`
+        else if (type === "mastercard") cardicon.innerHTML = `<i class="fa fa-cc-mastercard"></i>`
+        else if (type === "visa") cardicon.innerHTML = `<i class="fa fa-cc-visa"></i>`
+        else if (type === "discover") cardicon.innerHTML = `<i class="fa fa-cc-discover"></i>`
+        else cardicon.innerHTML = ""
+    }
+});
+
+var cleave = new Cleave('#cvc', {
+    blocks: [3],
+    numericOnly: true
+});
+
+
 // let buyButton = document.getElementById("buy")
 // buyButton.addEventListener("click", function() {
 //     preventDefault()
