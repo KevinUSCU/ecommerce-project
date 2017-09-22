@@ -13,9 +13,14 @@
   <script src="https://use.fontawesome.com/9ee73d7f3e.js"></script>
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <!-- Font Awesome CDN -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Local Styles -->
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/checkout.css">
+  <!-- Cleave Libraries -->
+  <script src="node_modules/cleave.js/dist/cleave.min.js"></script>
+  <script src="node_modules/cleave.js/dist/addons/cleave-phone.us.js"></script>
   <!-- Local JS -->
   <script defer src="js/inventory.js"></script>
   <script defer src="js/cart.js"></script>
@@ -56,51 +61,47 @@
     </nav>
     
   <!-- ==================== MAIN CONTENT ==================== -->
-    <div class="container">
+    <div class="container"><br>
       <!-- Purchase Receipt -->
       <section class="purchase-summary">
         <div class="row">
-          <div class="col-4">
-            <p>Thank you for your order! You're going to love it!</p>
+          <div class="col-4 thanks text-center">
+            <h1>Thank you!</h1>
           </div>
           <div class="col">
-            <h5>Here's a summary of your loot:</h5>
+            <h5>Here's your receipt:</h5>
             <div class="cart">
               <!-- JS inserts cart or empty message here -->
             </div>
           </div>
         </div>
       </section>
-
+      <br>
       <!-- Shipping & Billing Forms -->
-      <section class="shipping-billing">
+      <form class="shipping-billing">
         <div class="container-fluid">
           <div class="row">
-            <!-- Shipping -->
+            <!-- Shipping Address -->
             <div class="col">
               <h5>Shipping Address</h5>
-              <form class="shipping">
+              <!-- <form class="shipping"> -->
                 <div class="form-row">
                   <div class="col">
-                    <div class="form-group">
-                      <label for="firstName">First Name<span>*</span></label>
-                      <input type="text" required class="form-control" placeholder="<first name>" id="firstName">
-                      <div class="invalid-feedback">
-                        Please provide your first name.
-                      </div>
+                    <label for="firstName1">First Name<span>*</span></label>
+                    <input type="text" required class="form-control" placeholder="<first name>" id="firstName1">
+                    <div class="invalid-feedback">
+                      Please provide your first name.
                     </div>
                   </div>
                   <div class="col">                  
-                    <div class="form-group">
-                      <label for="lastName">Last Name<span>*</span></label>
-                      <input type="text" required class="form-control" placeholder="<last name>" id="lastName">
-                    </div>
+                    <label for="lastName1">Last Name<span>*</span></label>
+                    <input type="text" required class="form-control" placeholder="<last name>" id="lastName1">
                   </div>
                 </div>
                 <hr>
                 <div class="form-group">
-                  <label for="company">Company Name</label>
-                  <input type="text" class="form-control" placeholder="<company>" id="company">
+                  <label for="company1">Company Name</label>
+                  <input type="text" class="form-control" placeholder="<company>" id="company1">
                 </div>
                 <div class="form-group">
                   <label for="address1">Address<span>*</span></label>
@@ -108,88 +109,235 @@
                   <input type="text" class="form-control" placeholder="<apartment/unit>" id="address2">
                 </div>
                 <div class="form-group">
-                  <label for="city">City<span>*</span></label>
-                  <input type="text" class="form-control" placeholder="<city>" id="city">
+                  <label for="city1">City<span>*</span></label>
+                  <input type="text" required class="form-control" placeholder="<city>" id="city1">
                 </div>
                 <div class="form-row">
                   <div class="col">
-                    <div class="form-group">
-                      <label for="state">State<span>*</span></label>
-                      <select name="state" required class="form-control">
-                        <option value="">select a state</option>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="DC">District of Columbia</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="ID">Idaho</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="ME">Maine</option>
-                        <option value="MD">Maryland</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MO">Missouri</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NV">Nevada</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="NY">New York</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="OH">Ohio</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="OR">Oregon</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="TX">Texas</option>
-                        <option value="UT">Utah</option>
-                        <option value="VT">Vermont</option>
-                        <option value="VA">Virginia</option>
-                        <option value="WA">Washington</option>
-                        <option value="WV">West Virginia</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="WY">Wyoming</option>
-                      </select>
+                    <label for="state1">State<span>*</span></label>
+                    <select name="state1" required class="form-control">
+                      <option value="">select a state</option>
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="DC">District of Columbia</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="zip1">Zip Code<span>*</span></label>
+                    <input type="text" class="form-control" placeholder="<zip code>" id="zip1">
+                  </div>
+                </div>
+              <!-- </form> -->
+            </div>
+            <!-- Billing Address -->
+            <div class="col">
+              <h5>Billing Address</h5>
+              <!-- <form class="billing"> -->
+                <div class="form-row">
+                  <div class="col">
+                    <label for="firstName2">First Name<span>*</span></label>
+                    <input type="text" required class="form-control" placeholder="<first name>" id="firstName2">
+                    <div class="invalid-feedback">
+                      Please provide your first name.
+                    </div>
+                  </div>
+                  <div class="col">                  
+                    <label for="lastName2">Last Name<span>*</span></label>
+                    <input type="text" required class="form-control" placeholder="<last name>" id="lastName2">
+                  </div>
+                </div>
+                <hr>
+                <div class="form-group">
+                  <label for="company2">Company Name</label>
+                  <input type="text" class="form-control" placeholder="<company>" id="company2">
+                </div>
+                <div class="form-group">
+                  <label for="address3">Address<span>*</span></label>
+                  <input type="text" required class="form-control" placeholder="<street address>" id="address3">
+                  <input type="text" class="form-control" placeholder="<apartment/unit>" id="address4">
+                </div>
+                <div class="form-group">
+                  <label for="city2">City<span>*</span></label>
+                  <input type="text" required class="form-control" placeholder="<city>" id="city2">
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="state2">State<span>*</span></label>
+                    <select name="state2" required class="form-control">
+                      <option value="">select a state</option>
+                      <option value="AL">Alabama</option>
+                      <option value="AK">Alaska</option>
+                      <option value="AZ">Arizona</option>
+                      <option value="AR">Arkansas</option>
+                      <option value="CA">California</option>
+                      <option value="CO">Colorado</option>
+                      <option value="CT">Connecticut</option>
+                      <option value="DE">Delaware</option>
+                      <option value="DC">District of Columbia</option>
+                      <option value="FL">Florida</option>
+                      <option value="GA">Georgia</option>
+                      <option value="HI">Hawaii</option>
+                      <option value="ID">Idaho</option>
+                      <option value="IL">Illinois</option>
+                      <option value="IN">Indiana</option>
+                      <option value="IA">Iowa</option>
+                      <option value="KS">Kansas</option>
+                      <option value="KY">Kentucky</option>
+                      <option value="LA">Louisiana</option>
+                      <option value="ME">Maine</option>
+                      <option value="MD">Maryland</option>
+                      <option value="MA">Massachusetts</option>
+                      <option value="MI">Michigan</option>
+                      <option value="MN">Minnesota</option>
+                      <option value="MS">Mississippi</option>
+                      <option value="MO">Missouri</option>
+                      <option value="MT">Montana</option>
+                      <option value="NE">Nebraska</option>
+                      <option value="NV">Nevada</option>
+                      <option value="NH">New Hampshire</option>
+                      <option value="NJ">New Jersey</option>
+                      <option value="NM">New Mexico</option>
+                      <option value="NY">New York</option>
+                      <option value="NC">North Carolina</option>
+                      <option value="ND">North Dakota</option>
+                      <option value="OH">Ohio</option>
+                      <option value="OK">Oklahoma</option>
+                      <option value="OR">Oregon</option>
+                      <option value="PA">Pennsylvania</option>
+                      <option value="RI">Rhode Island</option>
+                      <option value="SC">South Carolina</option>
+                      <option value="SD">South Dakota</option>
+                      <option value="TN">Tennessee</option>
+                      <option value="TX">Texas</option>
+                      <option value="UT">Utah</option>
+                      <option value="VT">Vermont</option>
+                      <option value="VA">Virginia</option>
+                      <option value="WA">Washington</option>
+                      <option value="WV">West Virginia</option>
+                      <option value="WI">Wisconsin</option>
+                      <option value="WY">Wyoming</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="zip2">Zip Code<span>*</span></label>
+                    <input type="text" class="form-control" placeholder="<zip code>" id="zip2">
+                  </div>
+                </div>
+              <!-- </form> -->
+            </div>
+          </div>
+          <hr>
+          <!-- Credit Card Details & Submit -->
+          <div class="row">
+            <div class="col">
+              <input id="copy" type="checkbox" name="copy" value="">
+              <label for="copy">Billing address is the same as shipping address</label>
+            </div>
+            <div class="col">
+              <form class="creditcard">
+                <div class="form-group">
+                  <label for="cardnumber">Card Number<span>*</span></label>&nbsp&nbsp<div class="d-inline" id="cardicon"></div>
+                  <input type="text" class="form-control" placeholder="<credit card number>" id="cardnumber">
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <label for="expiration">Expiration<span>*</span></label>
+                    <div class="form-row">
+                      <div class="col">
+                        <select name="expmonth" required class="form-control">
+                          <option value="">month</option>
+                          <option value="01">Jan</option>
+                          <option value="02">Feb</option>
+                          <option value="03">Mar</option>
+                          <option value="04">Apr</option>
+                          <option value="05">May</option>
+                          <option value="06">Jun</option>
+                          <option value="07">Jul</option>
+                          <option value="08">Aug</option>
+                          <option value="09">Sep</option>
+                          <option value="10">Oct</option>
+                          <option value="11">Nov</option>
+                          <option value="12">Dec</option>
+                        </select>
+                      </div>
+                      <div class="col">
+                        <select name="expyear" required class="form-control">
+                          <option value="">year</option>
+                          <option value="2017">2017</option>
+                          <option value="2018">2018</option>
+                          <option value="2019">2019</option>
+                          <option value="2020">2020</option>
+                          <option value="2021">2021</option>
+                          <option value="2022">2022</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                   <div class="col">
-                    <div class="form-group">
-                      <label for="zip">Zip Code<span>*</span></label>
-                      <input type="number" min="0" max="99999" class="form-control" placeholder="<zip code>" id="zip">
-                    </div>
+                    <label for="cvc">CVC<span>*</span></label>
+                    <input type="text" class="form-control" placeholder="<cvc>" id="cvc">
                   </div>
                 </div>
-                <button type="submit" name="buy" class="btn btn-success">Gimmee!</button>
               </form>
-            </div>
-            <!-- Billing -->
-            <div class="col">
-              <h5>Billing Address</h5>
             </div>
           </div>
         </div>
-        
-      </section>
-
+        <hr>
+        <div class="row justify-content-end">
+          <div class="col-6">
+            <button type="submit" name="buy" class="btn btn-success">Gimmee!</button>
+          </div>
+        </div>
+      </form>
+      <br>
     </div><!-- close content-wrapper -->
 
   <!-- ==================== FOOTER ==================== -->

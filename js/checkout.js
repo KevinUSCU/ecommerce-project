@@ -1,5 +1,5 @@
 //Set following to true to generate fake cart for testing
-let cartFullTest = true
+let cartFullTest = false
 
 //Create test shopping cart
 if (cartFullTest) {
@@ -59,7 +59,38 @@ function displayCart() {
 
 displayCart()
 
-//Process Form
+//Form Input Limiters (via Cleave.js)
+
+var cleave = new Cleave('#zip1', {
+    delimiters: ["-"],
+    blocks: [5, 4],
+    numericOnly: true
+});
+
+var cleave = new Cleave('#zip2', {
+    delimiters: ["-"],
+    blocks: [5, 4],
+    numericOnly: true
+});
+
+var cleave = new Cleave('#cardnumber', {
+    creditCard: true,
+    onCreditCardTypeChanged: function(type) {
+        let cardicon = document.querySelector("#cardicon")
+        if (type === "amex") cardicon.innerHTML = `<i class="fa fa-cc-amex"></i>`
+        else if (type === "mastercard") cardicon.innerHTML = `<i class="fa fa-cc-mastercard"></i>`
+        else if (type === "visa") cardicon.innerHTML = `<i class="fa fa-cc-visa"></i>`
+        else if (type === "discover") cardicon.innerHTML = `<i class="fa fa-cc-discover"></i>`
+        else cardicon.innerHTML = ""
+    }
+});
+
+var cleave = new Cleave('#cvc', {
+    blocks: [3],
+    numericOnly: true
+});
+
+
 // let buyButton = document.getElementById("buy")
 // buyButton.addEventListener("click", function() {
 //     preventDefault()
