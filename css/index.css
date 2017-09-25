@@ -96,24 +96,26 @@ body {
 }
 
 @media (max-width: 990px) {
-.listing {
-  text-align: center;
+  .listing {
+    text-align: center;
+  }
+  #name {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+  #submit {
+    width: 25%;
+    margin: auto;
+  }
+  #email {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  #success {
+    margin: auto;
+  }
 }
-#name {
-  align-self: center;
-  margin-bottom: 1rem;
-}
-#submit {
-  width: 25%;
-  margin: auto;
-}
-#email {
-  width: 100%;
-  margin-bottom: 1rem;
-}
-#success {
-  margin: auto;
-}
+
 @media (min-width: 1px) and (max-width: 590px) {
   .listing {
     text-align: center;
