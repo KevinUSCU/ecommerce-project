@@ -1,5 +1,5 @@
 //Set following to true to generate fake cart for testing
-let cartFullTest = false
+let cartFullTest = true
 
 //Create test shopping cart
 if (cartFullTest) {
@@ -73,15 +73,25 @@ var cleave = new Cleave('#zip2', {
     numericOnly: true
 });
 
+var cardDigits = 16 //need to keep cleave card size global for form validation
+
 var cleave = new Cleave('#cardnumber', {
     creditCard: true,
     onCreditCardTypeChanged: function(type) {
         let cardicon = document.querySelector("#cardicon")
-        if (type === "amex") cardicon.innerHTML = `<i class="fa fa-cc-amex"></i>`
-        else if (type === "mastercard") cardicon.innerHTML = `<i class="fa fa-cc-mastercard"></i>`
-        else if (type === "visa") cardicon.innerHTML = `<i class="fa fa-cc-visa"></i>`
-        else if (type === "discover") cardicon.innerHTML = `<i class="fa fa-cc-discover"></i>`
-        else cardicon.innerHTML = ""
+        if (type === "amex") {
+            cardicon.innerHTML = `<i class="fa fa-cc-amex"></i>`
+            cardDigits = 15
+        } else if (type === "mastercard") {
+            cardicon.innerHTML = `<i class="fa fa-cc-mastercard"></i>`
+            cardDigits = 16
+        } else if (type === "visa") {
+            cardicon.innerHTML = `<i class="fa fa-cc-visa"></i>`
+            cardDigits = 16
+        } else if (type === "discover") {
+            cardicon.innerHTML = `<i class="fa fa-cc-discover"></i>`
+            cardDigits = 16
+        } else cardicon.innerHTML = ""
     }
 });
 
@@ -90,8 +100,67 @@ var cleave = new Cleave('#cvc', {
     numericOnly: true
 });
 
+//Copy Shipping to Billing
+let copyCheckbox = document.getElementById("copy")
+copyCheckbox.addEventListener("change", function(event) {
+    let firstname1 = document.querySelector("#shipping-billing #firstname1")
+    let lastname1 = document.querySelector("#shipping-billing #lastname1")
+    let company1 = document.querySelector("#shipping-billing #company1")
+    let address1 = document.querySelector("#shipping-billing #address1")
+    let address2 = document.querySelector("#shipping-billing #address2")
+    let city1 = document.querySelector("#shipping-billing #city1")
+    let state1 = document.querySelector("#shipping-billing #state1")
+    let zip1 = document.querySelector("#shipping-billing #zip1")
+    let firstname2 = document.querySelector("#shipping-billing #firstname2")
+    let lastname2 = document.querySelector("#shipping-billing #lastname2")
+    let company2 = document.querySelector("#shipping-billing #company2")
+    let address3 = document.querySelector("#shipping-billing #address3")
+    let address4 = document.querySelector("#shipping-billing #address4")
+    let city2 = document.querySelector("#shipping-billing #city2")
+    let state2 = document.querySelector("#shipping-billing #state2")
+    let zip2 = document.querySelector("#shipping-billing #zip2")
+    if (event.target.checked) { //copy shipping to billing
+        firstname2.value = firstname1.value
+        lastname2.value = lastname1.value
+        company2.value = company1.value
+        address3.value = address1.value
+        address4.value = address2.value
+        city2.value = city1.value
+        state2.value = state1.value
+        zip2.value = zip1.value
+    } else if (!event.target.checked) { //reset billing
+        firstname2.value = ""
+        lastname2.value = ""
+        company2.value = ""
+        address3.value = ""
+        address4.value = ""
+        city2.value = ""
+        state2.value = ""
+        zip2.value = ""        
+    }
+})
 
-// let buyButton = document.getElementById("buy")
-// buyButton.addEventListener("click", function() {
-//     preventDefault()
-// })
+//Form Submission and Validation
+let form = document.getElementById("shipping-billing")
+let message = document.getElementById("message")
+form.addEventListener("submit", function() {
+    event.preventDefault()
+    if(form.checkValidity() == false) {
+        event.stopPropagation()
+        //Display error message
+        message.innerHTML = "<b>Some information is missing. Please review items highlighted in red.</b>"
+        message.classList = "fail"
+        //Display invalid fields
+        form.classList.add("was-validated")
+    } else {
+        //Display success message
+        message.innerHTML = "<b>Your order has been successfully completed!</b>"
+        message.classList = "pass"
+        //Remove Purchase button
+        let button = document.querySelector("#buy")
+        button.parentNode.removeChild(button)
+        //Hide errors and reset form
+        form.classList.remove("was-validated")
+        form.reset()
+    }
+}, false)
